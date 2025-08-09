@@ -1,4 +1,5 @@
 package com.example.senya.data
 
-class AttractionResponse {
-}
+data class AttractionResponse (
+    val attractions : List<Attraction> = listOf()
+)
