@@ -39,7 +39,7 @@ class HomeFragmentAdapter( private val onClickedCallback: (String) -> Unit) : Re
         private val binding = ViewHolderAttractionBinding.bind(itemView)
         fun onBind(attraction: Attraction , onClicked:  (String) -> Unit) {
             binding.title.text =  attraction.title
-            Picasso.get().load(attraction.imageUrls[0]).into(binding.image);
+            Picasso.get().load(attraction.imageUrls[0]).into(binding.image)
             binding.text1.text = attraction.monthToVisit
             binding.root.setOnClickListener {
                 onClicked(attraction.id)

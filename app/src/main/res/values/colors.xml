@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Primary Colors -->
+    <color name="purple_500">#700080</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="orange_500">#FF9800</color>
+
+    <!-- Darker Shades -->
+    <color name="purple_700">#4A148C</color>
+    <color name="blue_700">#1976D2</color>
+    <color name="green_700">#388E3C</color>
+    <color name="orange_700">#F57C00</color>
+
+    <!-- Lighter Shades -->
+    <color name="purple_200">#CE93D8</color>
+    <color name="blue_200">#90CAF9</color>
+    <color name="green_200">#A5D6A7</color>
+    <color name="orange_200">#FFCC80</color>
+
+    <!-- Neutrals -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_light">#E0E0E0</color>
+    <color name="gray_dark">#757575</color>
+
+    <!-- Accent Colors (Material Design) -->
+    <color name="red_500">#F44336</color>
+    <color name="pink_500">#E91E63</color>
+    <color name="teal_500">#009688</color>
+    <color name="yellow_500">#FFEB3B</color>
 </resources>
