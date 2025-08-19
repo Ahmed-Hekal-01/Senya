@@ -8,9 +8,10 @@ import com.example.senya.data.Attraction
 import com.example.senya.databinding.ViewHolderAttractionBinding
 import com.squareup.picasso.Picasso
 
-class HomeFragmentAdapter( private val onClickedCallback: (String) -> Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class HomeFragmentAdapter(private val onClickedCallback: (String) -> Unit) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val attractions  = ArrayList<Attraction>()
+    private val attractions = ArrayList<Attraction>()
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -22,23 +23,25 @@ class HomeFragmentAdapter( private val onClickedCallback: (String) -> Unit) : Re
         holder: RecyclerView.ViewHolder,
         position: Int
     ) {
-        (holder as AttractionViewHolder).onBind(attractions[position] , onClickedCallback)
+        (holder as AttractionViewHolder).onBind(attractions[position], onClickedCallback)
     }
 
     override fun getItemCount(): Int {
         return attractions.size
     }
-    fun setData(attractions : List<Attraction>) {
+
+    fun setData(attractions: List<Attraction>) {
         this.attractions.clear()
         this.attractions.addAll(attractions)
         notifyDataSetChanged()
     }
+
     inner class AttractionViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.view_holder_attraction , parent , false)
+        LayoutInflater.from(parent.context).inflate(R.layout.view_holder_attraction, parent, false)
     ) {
         private val binding = ViewHolderAttractionBinding.bind(itemView)
-        fun onBind(attraction: Attraction , onClicked:  (String) -> Unit) {
-            binding.title.text =  attraction.title
+        fun onBind(attraction: Attraction, onClicked: (String) -> Unit) {
+            binding.title.text = attraction.title
             Picasso.get().load(attraction.imageUrls[0]).into(binding.image)
             binding.text1.text = attraction.monthToVisit
             binding.root.setOnClickListener {

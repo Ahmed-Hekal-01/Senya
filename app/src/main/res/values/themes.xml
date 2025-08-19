@@ -3,7 +3,11 @@
     <style name="Base.Theme.Senya" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:fontFamily">@font/almendra</item>
     </style>
 
     <style name="Theme.Senya" parent="Base.Theme.Senya" />
+    <style name="dialog" parent="Theme.Material3.DayNight.Dialog">
+        <item name="colorPrimary">@color/teal_500</item>
+    </style>
 </resources>

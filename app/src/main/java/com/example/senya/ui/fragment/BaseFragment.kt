@@ -1,7 +1,7 @@
 package com.example.senya.ui.fragment
 
 import androidx.fragment.app.Fragment
-import com.example.senya.data.Attraction
+import com.example.senya.Arch.AttractionViewModel
 import com.example.senya.ui.MainActivity
 
 abstract  class BaseFragment : Fragment() {
@@ -9,6 +9,6 @@ abstract  class BaseFragment : Fragment() {
         (activity as MainActivity).navController
     }
 
-    protected val attractions : List<Attraction>
-        get() = (activity as MainActivity).attractionList
+    protected val activityViewModel : AttractionViewModel
+        get() = (activity as MainActivity).viewModel
 }

@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+app/src/main/res/layout/it_task1.xml
+app/src/main/res/layout/it_task2.xml
