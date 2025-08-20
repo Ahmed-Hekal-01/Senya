@@ -1,4 +1,4 @@
-package com.example.senya.Arch
+package com.example.senya.arch
 
 import android.content.Context
 import com.example.senya.R

@@ -5,7 +5,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.example.senya.Arch.AttractionViewModel
+import com.example.senya.arch.AttractionViewModel
 import com.example.senya.R
 
 class MainActivity : AppCompatActivity() {

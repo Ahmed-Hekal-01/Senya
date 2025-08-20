@@ -2,8 +2,11 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
+    id ("kotlin-kapt")
 }
-
+kapt {
+    correctErrorTypes = true
+}
 android {
     namespace = "com.example.senya"
     compileSdk = 36
@@ -34,8 +37,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+        }
     }
 }
 
@@ -52,4 +57,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.squareup.picasso:picasso:2.8")
     implementation("com.squareup.moshi:moshi-kotlin:1.15.2")
+    val epoxyVersion = "5.1.4"
+    implementation("com.airbnb.android:epoxy:${epoxyVersion}")
+    kapt ("com.airbnb.android:epoxy-processor:$epoxyVersion")
 }

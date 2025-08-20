@@ -1,5 +1,4 @@
 package com.example.senya.ui.fragment
-
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater

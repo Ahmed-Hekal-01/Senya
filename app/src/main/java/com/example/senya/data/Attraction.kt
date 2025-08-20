@@ -6,9 +6,9 @@ data class Attraction(
     val description: String = "",
     val facts: List<String> = listOf(),
     val id: String = "",
-    @Json(name = "image_urls") val imageUrls: List<String> = listOf(),
+    @param:Json(name = "image_urls") val imageUrls: List<String> = listOf(),
     val location: Location = Location(),
-    @Json(name = "months_to_visit") val monthToVisit: String = "",
+    @param:Json(name = "months_to_visit") val monthToVisit: String = "",
     val title: String = ""
 ) {
     data class Location(

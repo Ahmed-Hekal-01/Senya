@@ -1,7 +1,7 @@
 package com.example.senya.ui.fragment
 
 import androidx.fragment.app.Fragment
-import com.example.senya.Arch.AttractionViewModel
+import com.example.senya.arch.AttractionViewModel
 import com.example.senya.ui.MainActivity
 
 abstract  class BaseFragment : Fragment() {
