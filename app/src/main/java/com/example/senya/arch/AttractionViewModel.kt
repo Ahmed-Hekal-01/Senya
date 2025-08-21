@@ -9,7 +9,7 @@ class AttractionViewModel : ViewModel() {
 
     private val repo = AttractionRepo()
 
-    val attractionListLiveData = MutableLiveData<List<Attraction>>()
+    val attractionListLiveData = MutableLiveData< ArrayList<Attraction>>()
 
     val selectedAttractionLiveData = MutableLiveData<Attraction>()
     fun init(context: Context) {
