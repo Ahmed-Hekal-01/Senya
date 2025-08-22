@@ -1,4 +1,5 @@
-package com.example.senya.ui.fragment
+package com.example.senya.ui.fragment.details
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.core.net.toUri
+import androidx.recyclerview.widget.LinearSnapHelper
 import com.example.senya.R
 import com.example.senya.databinding.FragmetAttractionDetailBinding
+import com.example.senya.ui.fragment.BaseFragment
 import com.squareup.picasso.Picasso
 
 class AttractionDetailFragment : BaseFragment() {
@@ -30,27 +33,38 @@ class AttractionDetailFragment : BaseFragment() {
             super.onViewCreated(view, savedInstanceState)
 
             binding.titleText.text = attraction.title
-            binding.descriptionText.text = attraction.description
-            Picasso.get().load(attraction.imageUrls[0]).into(binding.imageView)
-            binding.monthToVisit.text = attraction.monthToVisit
-            binding.factsText.text = "${attraction.facts.size} Facts"
+            binding.epoxyRecyclerView.setControllerAndBuildModels(
+                HeaderEpoxyController(
+                    attraction.imageUrls as ArrayList<String>
+                )
+            )
+            LinearSnapHelper().attachToRecyclerView(binding.epoxyRecyclerView)
+            binding.indicator.attachToRecyclerView(binding.epoxyRecyclerView)
 
-            binding.factsText.setOnClickListener {
-                val stringBuilder = StringBuilder("")
-                attraction.facts.forEach {
-                    stringBuilder.append("\u2022 $it")
-                    stringBuilder.append("\n\n")
-                }
-
-                val message = stringBuilder.toString()
-                    .substring(0, stringBuilder.toString().lastIndexOf("\n"))
-                AlertDialog.Builder(requireContext(), R.style.dialog)
-                    .setTitle("${attraction.facts.size} Facts")
-                    .setMessage(message)
-                    .setPositiveButton("OK") { dialog, which -> dialog.dismiss() }
-                    .setNegativeButton("NO!") { dialog, which -> dialog.dismiss() }
-                    .show()
-            }
+            binding.contentEpoxyModel.setControllerAndBuildModels(
+                ContentEpoxyController(
+                    attraction
+                )
+            )
+//            binding.monthToVisit.text = attraction.monthToVisit
+//            binding.factsText.text = "${attraction.facts.size} Facts"
+//
+//            binding.factsText.setOnClickListener {
+//                val stringBuilder = StringBuilder("")
+//                attraction.facts.forEach {
+//                    stringBuilder.append("\u2022 $it")
+//                    stringBuilder.append("\n\n")
+//                }
+//
+//                val message = stringBuilder.toString()
+//                    .substring(0, stringBuilder.toString().lastIndexOf("\n"))
+//                AlertDialog.Builder(requireContext(), R.style.dialog)
+//                    .setTitle("${attraction.facts.size} Facts")
+//                    .setMessage(message)
+//                    .setPositiveButton("OK") { dialog, which -> dialog.dismiss() }
+//                    .setNegativeButton("NO!") { dialog, which -> dialog.dismiss() }
+//                    .show()
+//            }
 
             binding.location.setOnClickListener {
                 val uri =

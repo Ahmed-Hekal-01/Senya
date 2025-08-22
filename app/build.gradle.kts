@@ -59,5 +59,6 @@ dependencies {
     implementation("com.squareup.moshi:moshi-kotlin:1.15.2")
     val epoxyVersion = "5.1.4"
     implementation("com.airbnb.android:epoxy:${epoxyVersion}")
+    implementation("ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.2.5")
     kapt ("com.airbnb.android:epoxy-processor:$epoxyVersion")
 }

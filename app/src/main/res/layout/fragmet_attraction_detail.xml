@@ -5,16 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageView"
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/epoxyRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/header"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/epoxyRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/titleText"
+        app:spi_dotColor="@color/white"
+        app:spi_dotSelectedColor="@color/white" />
 
     <TextView
         android:id="@+id/titleText"
@@ -26,52 +39,34 @@
         android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/location"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/epoxyRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/epoxyRecyclerView" />
 
-    <TextView
-        android:id="@+id/descriptionText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:text="@tools:sample/lorem/random" />
 
-    <TextView
-        android:id="@+id/monthToVisit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="all year"
-        android:textSize="16sp"
-        android:drawablePadding="8dp"
-        app:drawableStartCompat="@drawable/outline_flight_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/factsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="?selectableItemBackground"
-        android:text="3 facts"
-        android:textSize="16sp"
-        android:drawablePadding="8dp"
-        app:drawableStartCompat = "@drawable/light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
     <TextView
         android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/imageView"
-        app:layout_constraintBottom_toBottomOf="@id/imageView"
-        app:drawableEndCompat = "@drawable/location"
-        android:paddingEnd="8dp"
         android:background="?selectableItemBackground"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        android:paddingEnd="8dp"
+        app:drawableEndCompat="@drawable/location"
+        app:layout_constraintBottom_toBottomOf="@id/epoxyRecyclerView"
+        app:layout_constraintEnd_toEndOf="@id/epoxyRecyclerView"
+        tools:ignore="RtlSymmetry" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/contentEpoxyModel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingBottom="24dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
