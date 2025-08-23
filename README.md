@@ -1,12 +1,12 @@
-# 🌍 Corita Travel Guide
+# 🌍 croatia Travel Guide
 
-An Android app designed to help travelers explore **Corita** by providing useful information about the city, its culture, attractions, and the best time to visit.  
+An Android app designed to help travelers explore **croatia** by providing useful information about the city, its culture, attractions, and the best time to visit.  
 The app offers quick insights, photos, and travel tips for anyone planning a trip.  
 
 ---
 
 ## ✨ Features
-- 📖 **City Facts** – Learn interesting facts about Corita.  
+- 📖 **City Facts** – Learn interesting facts about croatia
 - 🏙️ **City Descriptions** – Short guides about history, culture, and must-see attractions.  
 - 🖼️ **Photos** – Beautiful images showcasing the city.  
 - 📅 **Best Time to Visit** – Recommended months and seasons for travel.  
