@@ -28,6 +28,8 @@ The app offers quick insights, photos, and travel tips for anyone planning a tri
 
 
 ---
+## 🎥 Demo Video
+[▶️ Watch Demo](https://youtu.be/eNMlbYTfSmI)
 
 ## 🛠️ Tech Stack
 - **Kotlin / Java**  
