@@ -1,4 +1,4 @@
-# 🌍 croatia Travel Guide
+# 🌍 Croatia Travel Guide
 
 An Android app designed to help travelers explore **croatia** by providing useful information about the city, its culture, attractions, and the best time to visit.  
 The app offers quick insights, photos, and travel tips for anyone planning a trip.  
