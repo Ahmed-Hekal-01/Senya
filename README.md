@@ -13,6 +13,12 @@ The app offers quick insights, photos, and travel tips for anyone planning a tri
 - 📌 **Travel Tips** – Handy advice to make your trip smoother.  
 
 ---
+## 🎥 Demo Video
+
+[▶️ Watch Demo](https://youtu.be/eNMlbYTfSmI)
+
+---
+
 ## 📱 Screenshots
 
 <table>
@@ -28,8 +34,6 @@ The app offers quick insights, photos, and travel tips for anyone planning a tri
 
 
 ---
-## 🎥 Demo Video
-[▶️ Watch Demo](https://youtu.be/eNMlbYTfSmI)
 
 ## 🛠️ Tech Stack
 - **Kotlin / Java**  
@@ -37,8 +41,3 @@ The app offers quick insights, photos, and travel tips for anyone planning a tri
 - **XML UI**  
 
 ---
-
-## 🚀 Getting Started
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/yourusername/corita-travel-app.git
