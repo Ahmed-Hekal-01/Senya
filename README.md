@@ -1,0 +1,32 @@
+# 🌍 Corita Travel Guide
+
+An Android app designed to help travelers explore **Corita** by providing useful information about the city, its culture, attractions, and the best time to visit.  
+The app offers quick insights, photos, and travel tips for anyone planning a trip.  
+
+---
+
+## ✨ Features
+- 📖 **City Facts** – Learn interesting facts about Corita.  
+- 🏙️ **City Descriptions** – Short guides about history, culture, and must-see attractions.  
+- 🖼️ **Photos** – Beautiful images showcasing the city.  
+- 📅 **Best Time to Visit** – Recommended months and seasons for travel.  
+- 📌 **Travel Tips** – Handy advice to make your trip smoother.  
+
+---
+
+## 📱 Screenshots
+*(Add your app screenshots here once available)*  
+
+---
+
+## 🛠️ Tech Stack
+- **Kotlin / Java**  
+- **Android Studio**  
+- **XML UI**  
+
+---
+
+## 🚀 Getting Started
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/yourusername/corita-travel-app.git
