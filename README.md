@@ -15,7 +15,7 @@ The app offers quick insights, photos, and travel tips for anyone planning a tri
 ---
 
 ## 📱 Screenshots
-*(Add your app screenshots here once available)*  
+<img width="461" height="775" alt="image" src="https://github.com/user-attachments/assets/29bd0653-ac97-418a-9781-a4d0514a4ad4" />
 
 ---
 
